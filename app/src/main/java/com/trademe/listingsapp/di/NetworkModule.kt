@@ -1,5 +1,7 @@
 package com.trademe.listingsapp.di
 
+import com.trademe.listingsapp.BuildConfig
+import com.trademe.listingsapp.data.remote.api.TradeMeApiService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -41,7 +43,7 @@ object NetworkModule {
 
         val authInterceptor = Interceptor { chain ->
             val request = chain.request().newBuilder()
-                .addHeader("Authorization", AUTH_HEADER)
+                .addHeader("Authorization", BuildConfig.AUTH_HEADER)
                 .build()
             chain.proceed(request)
         }
@@ -68,4 +70,9 @@ object NetworkModule {
             .build()
     }
 
+    @Provides
+    @Singleton
+    fun provideTradeMeApiService(retrofit: Retrofit): TradeMeApiService {
+        return retrofit.create(TradeMeApiService::class.java)
+    }
 }
