@@ -1,32 +1,34 @@
 package com.trademe.listingsapp.presentation.navigation
 
+import androidx.annotation.DrawableRes
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.List
 import androidx.compose.material.icons.filled.FavoriteBorder
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.ui.graphics.vector.ImageVector
+import com.trademe.listingsapp.R
 
 
 sealed class Screen(
     val route: String,
     val title: String,
-    val icon: ImageVector
+    @DrawableRes val iconRes: Int
 ) {
     object LatestListings : Screen(
         route = "latest",
         title = "Latest Listings",
-        icon = Icons.AutoMirrored.Filled.List
+        iconRes = R.drawable.search
     )
 
     object Watchlist: Screen(
         route = "watchlist",
         title = "Watchlist",
-        icon = Icons.Default.FavoriteBorder
+        iconRes = R.drawable.ic_binoculars
     )
 
     object MyTradeMe: Screen(
         route = "mytrademe",
         title = "My Trade Me",
-        icon = Icons.Default.Person
+        iconRes = R.drawable.profile
     )
 }
