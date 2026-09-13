@@ -1,13 +1,7 @@
 package com.trademe.listingsapp.presentation.navigation
 
 import androidx.annotation.DrawableRes
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.List
-import androidx.compose.material.icons.filled.FavoriteBorder
-import androidx.compose.material.icons.filled.Person
-import androidx.compose.ui.graphics.vector.ImageVector
 import com.trademe.listingsapp.R
-
 
 sealed class Screen(
     val route: String,
