@@ -31,7 +31,7 @@ class HomeViewModel @Inject constructor(
     private fun loadListings() {
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isLoading = true, error = null)
-            repository.getLastestListings()
+            repository.getLatestListings()
                 .onSuccess { listings ->
                     _uiState.value = _uiState.value.copy(
                         isLoading = false,

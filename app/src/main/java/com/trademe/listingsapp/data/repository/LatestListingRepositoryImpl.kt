@@ -16,7 +16,7 @@ class LatestListingRepositoryImpl @Inject constructor(
         private const val MAX_LISTINGS = 20
     }
 
-    override suspend fun getLastestListings(): Result<List<LatestListing>> {
+    override suspend fun getLatestListings(): Result<List<LatestListing>> {
         return try {
             val response = apiService.getLatestListings()
             val listings = response.listings
