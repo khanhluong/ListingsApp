@@ -35,6 +35,8 @@ data class ListingDto(
     val photoUrls: List<String>? = null,
     @SerialName("IsClassified")
     val isClassified: Boolean? = null,
+    @SerialName("IsAuction")
+    val isAuction: Boolean? = null,
     @SerialName("BuyNowPrice")
     val buyNowPrice: Double? = null
 )

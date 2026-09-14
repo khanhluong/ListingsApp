@@ -92,6 +92,16 @@ fun ListingCard(
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis
                 )
+
+                if (listing.isAuction && listing.buyNowPrice != null) {
+                    Text(
+                        text = "Buy Now: $${"%,.2f".format(listing.buyNowPrice)}",
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.primary,
+                        maxLines = 1,
+                        overflow = TextOverflow.Ellipsis
+                    )
+                }
             }
         }
     }

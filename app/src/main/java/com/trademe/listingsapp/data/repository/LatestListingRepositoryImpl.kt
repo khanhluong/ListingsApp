@@ -38,7 +38,8 @@ class LatestListingRepositoryImpl @Inject constructor(
             priceDisplay = priceDisplay ?: "",
             pictureUrl = pictureHref ?: photoUrls?.firstOrNull() ?: "",
             isClassified = isClassified ?: false,
-            isAuction = false
+            isAuction = isAuction ?: false,
+            buyNowPrice = buyNowPrice
         )
     }
 }

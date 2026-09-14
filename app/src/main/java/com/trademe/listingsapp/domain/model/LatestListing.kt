@@ -7,5 +7,6 @@ data class LatestListing(
     val priceDisplay: String,
     val pictureUrl: String,
     val isClassified: Boolean,
-    val isAuction: Boolean
+    val isAuction: Boolean,
+    val buyNowPrice: Double?
 )

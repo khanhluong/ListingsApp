@@ -39,7 +39,8 @@ class HomeViewModelTest {
         LatestListing(
             1, "House", "Auckland", "$500k", "url1",
             isClassified = false,
-            isAuction = false
+            isAuction = false,
+            buyNowPrice = null
         ),
         LatestListing(
             2,
@@ -48,7 +49,8 @@ class HomeViewModelTest {
             "$400k",
             "url2",
             isClassified = true,
-            isAuction = false
+            isAuction = false,
+            buyNowPrice = null
         )
     )
 
